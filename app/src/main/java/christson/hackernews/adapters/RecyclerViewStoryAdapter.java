@@ -66,4 +66,10 @@ public class RecyclerViewStoryAdapter extends RecyclerView.Adapter<StoryViewHold
     {
         return context.getString(resid);
     }
+
+    public void setData(ArrayList<Story> list)
+    {
+        this.listOfStory.clear();
+        this.listOfStory.addAll(list);
+    }
 }

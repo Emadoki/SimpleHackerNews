@@ -1,5 +1,8 @@
 package christson.hackernews.entities;
 
+import android.text.Html;
+import android.text.Spanned;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
@@ -30,6 +33,11 @@ public class Comment extends BaseItem
     public String getComment()
     {
         return comment;
+    }
+
+    public Spanned getHtmlComment()
+    {
+        return Html.fromHtml(comment);
     }
 
     public void setComment(String comment)

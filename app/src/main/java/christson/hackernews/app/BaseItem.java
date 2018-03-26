@@ -12,7 +12,7 @@ public class BaseItem
     @SerializedName("id")
     private int id;
     @SerializedName("time")
-    private int time;
+    private long time;
     @SerializedName("type")
     private ITEM_TYPE type;
 
@@ -52,7 +52,7 @@ public class BaseItem
         return time * 1000L;
     }
 
-    public void setTime(int time)
+    public void setTime(long time)
     {
         this.time = time;
     }

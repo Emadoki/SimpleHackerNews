@@ -2,7 +2,6 @@ package christson.hackernews.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,7 +36,7 @@ public class RecyclerViewCommentAdapter extends RecyclerView.Adapter<CommentView
     {
         Comment comment = listOfComment.get(position);
 
-        holder.txtComment.setText(Html.fromHtml(comment.getComment()));
+        holder.txtComment.setText(comment.getHtmlComment());
         holder.txtAuthor.setText(comment.getAuthor());
 
         String time = AppUtil.parseTime(context, comment.getTime());
